@@ -232,11 +232,9 @@ class RpiSettingsManager(UpdateSettingsManager, SetupSettingsManager, BuildSetti
         If no RequiredSubmodules return an empty iterable
         '''
         return [
-            RequiredSubmodule("MU_BASECORE"),
-            RequiredSubmodule("Common/MU_OEM"),
-            RequiredSubmodule("Common/MU"),
-            RequiredSubmodule("Common/TIANO"),
-            RequiredSubmodule("Silicon/ARM/MU_TIANO"),
+            RequiredSubmodule("edk2"),
+            RequiredSubmodule("platform"),
+            RequiredSubmodule("non-osi"),
         ]
 
     def GetArchitecturesSupported(self):
